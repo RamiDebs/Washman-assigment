@@ -8,7 +8,7 @@
     "rootDir": "./src",
     "moduleResolution": "node",
     "baseUrl": "./",
-    "typeRoots": ["./src/Models"],
+    "typeRoots": ["./src/Api/v1/Models"],
     "resolveJsonModule": true,
     "outDir": "./dist",
     "esModuleInterop": true,
