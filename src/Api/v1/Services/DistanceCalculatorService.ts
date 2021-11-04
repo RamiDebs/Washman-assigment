@@ -1,4 +1,4 @@
-import { starbucksPoint } from "src/Config/Constans";
+import { starbucksPoint } from "../../../Config/Constans";
 import { Company } from "../Models/company_model";
 import { GeoPoint } from "../Models/geo_point_model";
 import { Office } from "../Models/office_model";
@@ -69,7 +69,7 @@ function searchNearbyCompanies(distance: number) {
  * @param filteredCompaniesBuilder
  * @returns sorted nearby companies according to company"s name
  */
-function searchAndSortNearbyCompanies(
+export function searchAndSortNearbyCompanies(
   distance: number,
   filteredCompaniesBuilder: Company[]
 ) {
