@@ -1,4 +1,4 @@
-import { starbucksPoint } from "../../../Config/Constans";
+import { starbucksPoint } from "../../../Config/Constants";
 import { Company } from "../Models/company_model";
 import { GeoPoint } from "../Models/geo_point_model";
 import { Office } from "../Models/office_model";

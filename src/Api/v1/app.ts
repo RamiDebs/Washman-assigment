@@ -1,5 +1,5 @@
 import express, { Application, Request, Response,  } from "express";
-import { baseCompanyUrl } from "../../../src/Config/Constans";
+import { baseCompanyUrl } from "../../Config/Constants";
 import "../../../.env"
 //init the app
 export const app: Application = express();
@@ -18,6 +18,12 @@ require('dotenv').config()
 app.get('/', function (req, res) {
  
  });
- 
-//listen to port {process.env.PORT = 5050} for our project
+//listen to port 5050 for our project
 app.listen(process.env.PORT, () => console.log("server running on port "+ process.env.PORT));
+
+
+const companiesRouter = require("../v1/Routes/CompaniesRoute");
+app.use(baseCompanyUrl.toString(), companiesRouter);
+
+
+

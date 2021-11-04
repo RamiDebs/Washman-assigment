@@ -1,8 +1,7 @@
 import { Request, Response, Router } from "express";
 import { Company } from "../Models/company_model";
 import { searchAndSortNearbyCompanies } from "../Services/DistanceCalculatorService";
-import { baseCompanyInviteUrl, baseCompanyUrl, } from "../../../Config/Constans";
-import { app } from "../app";
+import { baseCompanyInviteUrl, } from "../../../Config/Constants";
 
 const express = require('express');
 const router: Router = express.Router();
@@ -41,8 +40,6 @@ function inviteCompanies(req: Request, res: Response) {
 /**
  * getCompanies api end point
  */
-
 router.get(baseCompanyInviteUrl.concat("/:distance"), inviteCompanies);
-app.use(baseCompanyUrl.toString(), router);
 
 module.exports = router;
